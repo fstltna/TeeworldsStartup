@@ -49,7 +49,7 @@ if ($Command eq "start")
 			unlink("$TEEWORLDSDIR/nostart");
 		}
 		# Start the screen process
-		system("nohup $TEEWORLDSDIR/startminetest > $TEEWORLDSDIR/TeeworldsStartup.log\&");
+		system("/usr/bin/nohup $TEEWORLDSDIR/startteeworlds > $TEEWORLDSDIR/TeeworldsStartup.log\&");
 	}
 }
 elsif ($Command eq "stop")
@@ -59,7 +59,7 @@ elsif ($Command eq "stop")
 	if ($running ne "")
 	{
 		# Process is running, kill it
-		system("killall \"./Server --headless\"");
+		system("killall \"teeworlds_srv\"");
 	}
 }
 elsif ($Command eq "restart")
@@ -71,7 +71,7 @@ elsif ($Command eq "restart")
 	}
 	if ($running ne "")
 	{
-		system("killall \"./Server --headless\"");
+		system("killall \"teeworlds_srv\"");
 	}
 }
 elsif ($Command eq "status")
