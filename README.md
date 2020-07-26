@@ -8,7 +8,7 @@ Official support sites: [Official Github Repo](https://github.com/fstltna/Teewor
 These start up the Teeworlds server at boot time with a "screen" process.
 
 1. Copy **teeworlds** into **/home/twowner/bin/teeworlds** - make sure it is executable
-2. Copy **startteeworlds** into **/home/twowner** - make sure it is executable
+2. Copy **startteeworlds** into **/home/twowner/twserver** - make sure it is executable
 3. Put **@reboot /home/twowner/bin/teeworld start** into your crontab
 
 When you want to view the Teeworlds console, just enter "**screen -r**" in your shell.
